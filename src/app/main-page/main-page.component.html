@@ -1,24 +1,25 @@
 <app-header></app-header>
-
 <div cdkDropListGroup class="fullPage">
-  
   <div class="example-container">
     <div class="h2">
-    <h2>components</h2></div>
+      <h2>components</h2>
+    </div>
     <div cdkDropList [cdkDropListData]="components" class="example-list">
-      <div class=" item example-box" *ngFor="let item of components" cdkDrag>
-        {{item}}
+      <div class="item example-box" *ngFor="let item of components" cdkDrag>
+        {{ item }}
       </div>
     </div>
   </div>
   <div class="example-container">
     <div class="h2">
-    <h2>Form</h2></div>
-    <div 
+      <h2>Form</h2>
+    </div>
+    <div
       cdkDropList
       [cdkDropListData]="Form"
       class="example-list"
-      (cdkDropListDropped)="drop($event)">
+      (cdkDropListDropped)="drop($event)"
+    >
       <!-- Text Area -->
       <div *ngFor="let item of Form" cdkDrag>
         <div *ngIf="item === 'Text Area'">
@@ -31,7 +32,7 @@
             >
               <div class="form-group jumbotron" [formGroupName]="i">
                 <div>
-                  <input type="text" placeholder="Enter Your Question">
+                  <input type="text" placeholder="Enter Your Question" />
                   <!-- <button
                     *ngIf="i > 0"
                     class="btn btn-danger float-end mb-1"
@@ -47,18 +48,16 @@
               <!-- <button class="btn btn-primary" (click)="addAddress1()">
                 Add More option+
               </button> -->
-              
-                <button (click)="onDelete(item)" class="deletebtn btn-primary" > Delete</button>
-                  <button class="addbtn btn-primary" > Save</button>
-                
+
+              <button (click)="onDelete(item)" class="deletebtn btn-primary">
+                Delete
+              </button>
+              <button class="addbtn btn-primary">Save</button>
             </div>
-          
           </form>
           <hr />
-          
-        </div><br>
-        
-
+        </div>
+        <br />
         <!-- single choice question -->
 
         <div *ngIf="item === 'Single Choice Question'">
@@ -84,29 +83,32 @@
                   >
                     Remove button
                   </button>
-                  
                 </div>
-                <br/>
-                
+                <br />
               </div>
             </div>
             <div class="form-row org-desc-parent-margin">
               <button class="btn btn-primary" (click)="addAddress2()">
                 Add More option+
               </button>
-              <button (click)="onDelete(item)" class="deletebtn btn-primary" > Delete</button>
-                  <button class="addbtn btn-primary" > Save</button>
+              <button (click)="onDelete(item)" class="deletebtn btn-primary">
+                Delete
+              </button>
+              <button class="addbtn btn-primary">Save</button>
             </div>
           </form>
-          <hr/>
+          <hr />
         </div>
-
 
         <!-- Multiple choice question -->
 
         <div *ngIf="item === 'Multiple Choice Question'">
           <div>
-            <input class="" type=" text" placeholder="Enter Your Question" /><br />
+            <input
+              class=""
+              type=" text"
+              placeholder="Enter Your Question"
+            /><br />
           </div>
           <br />
           <form class="example-form" [formGroup]="userForm">
@@ -135,11 +137,13 @@
               <button class="btn btn-primary" (click)="addAddress1()">
                 Add More option+
               </button>
-              <button (click)="onDelete(item)" class="deletebtn btn-primary" > Delete</button>
-              <button class="addbtn btn-primary" > Save</button>
+              <button (click)="onDelete(item)" class="deletebtn btn-primary">
+                Delete
+              </button>
+              <button class="addbtn btn-primary">Save</button>
             </div>
           </form>
-          <hr/>
+          <hr />
         </div>
       </div>
     </div>

@@ -1,12 +1,19 @@
 .example-full-width {
   width: 100%;
   width: 550px;
+ 
+    margin: 12px 0;
+    background-color: #565656b5;
+    width: 550px;
+    border-radius: 5px;
+    padding: 8px;
+  
 }
 .addbtn{
 
-  margin-left: 5.4em;
+  margin-left: 8px;
   }
 .removebtn{
   margin-left: 8px;
-//   margin-right: 0px;
+  // margin-right: 0px;
 }

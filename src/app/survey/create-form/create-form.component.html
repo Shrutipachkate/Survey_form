@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar">Welcome to Survey App :)
+<!-- <mat-toolbar class="toolbar">Welcome to Survey App :)
   <div class="basic-btn">
     <button mat-button routerLink="/mainpage">Home</button>
    </div>
@@ -8,7 +8,23 @@
     <div class="basic-btn logout">
       <button mat-button (click)="logout()">Log Out</button>
     </div>
+</mat-toolbar> -->
+
+<mat-toolbar class="spacer">
+  <div class="toolbar_text"> Welcome to Survey App :)
+    <!-- <span class="example-spacer"></span> -->
+     <button mat-button class="home" routerLink="/mainpage">Home</button>
+  <button mat-button class="history" (click)="history()">History</button>
+  <button mat-button class="logout" (click)="logout()">Log Out</button>
+  </div> 
+
+  <!-- <button mat-button class="home" routerLink="/mainpage">Home</button>
+  <button mat-button class="history" (click)="history()">History</button>
+  <button mat-button class="logout" (click)="logout()">Log Out</button> -->
+  
 </mat-toolbar>
+
+
 
 <div class="body">
   <div cdkDropListGroup>
@@ -37,7 +53,7 @@
             <app-multiple-correct #multipleCorrectComponent *ngSwitchCase="'Multiple Correct'"></app-multiple-correct>
           </ng-container>
         </div>
-        <button class="submitbtn" mat-button color="primary" (click)="onFormSubmit()">
+        <button (click)="onFormSubmit()">
           Submit Form
         </button>
       </div>
